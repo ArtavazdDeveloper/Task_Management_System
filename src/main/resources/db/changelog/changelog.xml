@@ -1,0 +1,83 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"-->
+<!--                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-->
+<!--                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">-->
+
+<!--    <property name="now" value="now()" dbms="mysql"/>-->
+
+<!--    &lt;!&ndash; Создание таблицы "categories" &ndash;&gt;-->
+<!--    <changeSet id="createCategoriesTable" author="Task Management System">-->
+<!--        <createTable tableName="categories">-->
+<!--            <column name="id" type="int" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="name" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+<!--    &lt;!&ndash; Создание таблицы "users" &ndash;&gt;-->
+<!--    <changeSet id="createUsersTable" author="Task Management System">-->
+<!--        <createTable tableName="users">-->
+<!--            <column name="id" type="int" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="name" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="surname" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="email" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="password" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="type" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+<!--    &lt;!&ndash; Создание таблицы "todos" &ndash;&gt;-->
+<!--    <changeSet id="createTodosTable" author="Task Management System">-->
+<!--        <createTable tableName="todos">-->
+<!--            <column name="id" type="int" autoIncrement="true">-->
+<!--                <constraints primaryKey="true" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="title" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="status" type="varchar(255)">-->
+<!--                <constraints nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="category_id" type="int">-->
+<!--                <constraints nullable="false" foreignKeyName="fk_todo_category" references="categories(id)"/>-->
+<!--            </column>-->
+<!--            <column name="user_id" type="int">-->
+<!--                <constraints nullable="false" foreignKeyName="fk_todo_user" references="users(id)"/>-->
+<!--            </column>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+
+<!--    &lt;!&ndash; Удаление внешних ключей в таблице "todos" &ndash;&gt;-->
+<!--    <changeSet id="dropForeignKeyConstraints" author="Task Management System">-->
+<!--        <dropForeignKeyConstraint baseTableName="todos" constraintName="fk_todo_category_id"/>-->
+<!--        <dropForeignKeyConstraint baseTableName="todos" constraintName="fk_todo_user_id"/>-->
+<!--    </changeSet>-->
+
+<!--    &lt;!&ndash; Удаление таблиц &ndash;&gt;-->
+<!--    <changeSet id="dropCategoriesTable" author="Task Management System">-->
+<!--        <dropTable tableName="categories"/>-->
+<!--    </changeSet>-->
+<!--    <changeSet id="dropUsersTable" author="Task Management System">-->
+<!--        <dropTable tableName="users"/>-->
+<!--    </changeSet>-->
+<!--    <changeSet id="dropTodosTable" author="Task Management System">-->
+<!--        <dropTable tableName="todos"/>-->
+<!--    </changeSet>-->
+
+<!--</databaseChangeLog>-->

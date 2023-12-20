@@ -1,0 +1,9 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE= task_management_system'
+      - 'MYSQL_ROOT_PASSWORD= root'
+      - 'MYSQL_USER=root'
+    ports:
+      - '3306'

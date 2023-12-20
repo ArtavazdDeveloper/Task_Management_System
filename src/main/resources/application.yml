@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/task_management_system
+    username: root
+    password: root
+
+  jpa:
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:/resources/db/changelog/changelog.xml
+jwt:
+  secret: YXNkZmYkIyNzZFNEU0RBQVNERksjQEBkc2ZqZGZrZHNqQEAjZHNmZ2ZnZmdeXiYmWipeJSQkI2RzZHMkIyVzZDQ1MDk5KUkjJCg5V0ZTSUo=
+  expiration: 600000
+springdoc:
+  packages-to-scan: com/example/task_management_system/endpoint
+  site:
+    url: http://localhost:8080
+  server:
+    port: 8084
